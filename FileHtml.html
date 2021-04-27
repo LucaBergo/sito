@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Il mio sito</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="FileCss.css" type="text/css">
+    
+
+    
+    <style>
+        
+    </style>
+</head>
+
+<body background-color=RGB(223, 207, 190)>
+    <div class="topnav">
+        <a class="active" href="file:///C:/Users/Asus/Desktop/cartella%20scuola/info/sito.html" >Home</a>
+        <a href="https://www.fifaultimateteam.it/"  target="_blank" >News</a>
+        <a href="https://www.ea.com/games/fifa/news/five-years-of-fifa-ultimate-team" target="_blank">About Fut</a>
+    </div>
+    <h1 id="titolo1">FIFA 21</h1>
+    <a href="https://www.ea.com/it-it/games/fifa/fifa-21/ultimate-team/features" target="_blank">
+    <img id="foto1" src="https://cdn3.whatculture.com/images/2020/08/78c73b3dd001abc7-1200x675.jpg">
+    </a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h051>Ultimate team</h2>
+    <p id="paragrafo1">FIFA Ultimate Team (chiamato comunemente con la semplice abbreviazione FUT) è una modalità introdotta a partire da Fifa’09 in cui l’obiettivo è quello di costruire una squadra, utilizzando giocatori di qualsiasi club e nazionalità, con con cui competere in tornei offline e (soprattutto) online.
+
+        Le squadre vengono composte utilizzando le carte FUT: ogni utente al primo avvio del gioco riceve in regalo dei “pacchetti” che ricordano per certi versi quelli delle figurine dei calciatori con cui ognuno di noi ha avuto a che fare almeno una volta nella vita.
+        
+        Le cards di Ultimate Team sono essenzialmente divise in tre categorie: i giocatori più forti di Fifa hanno carte di tipo Oro. Immediatamente alle loro spalle ci sono quei giocatori meno noti a cui viene riservata una card di colore argento mentre quelli “più scarsi” ne hanno una bronzo.
+        <a id="link1" href="https://www.ea.com/it-it/games/fifa/fifa-21/ultimate-team/features" target="_blank">Clicca qui per ulteriori informazioni</a>
+    </p>
+
+    
+ 
+
+    <h2>Diverse modalità di gioco</h2>
+    <br>
+
+    <div class="slideshow-container">
+    <div class="mySlides fade">
+        <div class="numbertext">1/3 </div>
+        <img src="./futchamp.jpg" style="width:100%">
+        <div class="text">FUT CHAMPIONS</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2/3 </div>
+        <img src="./rivals.jpg" style="width:100%">
+        <div class="text">RIVALS</div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">3/3</div>
+        <img src="./battles.jpg" style="width:100%">
+        <div class="text">SQUAD BATTLES</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+    <br>
+    <br>
+   
+
+    
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    <br>
+    <br>
+
+    <button id="bottone1"  onclick="changeTitle()">Magic</button>
+
+    <button onclick="saluta()">Ciao!</button>
+    
+    <button onclick="song()" ondblclick="song_stop()">Fifa soundtrack</button>
+
+    <audio id="canzone" src="./audio.mp3"></audio>
+    
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+
+        function saluta(){
+            alert("ciao")
+        }
+        function changeTitle(){
+            document.getElementById("titolo1").style.color="red"
+            document.getElementById("titolo1").innerHTML="SIUUUUM"
+            document.getElementById("titolo1").style.fontWeight="bold"
+            document.getElementById("titolo1").style.fontFamily="Verdana"
+        
+        }
+        function song(){
+
+            document.getElementById("canzone").play()
+        }
+        function song_stop(){
+            document.getElementById("canzone").pause()
+            document.getElementById("canzone").currentTime=0.0
+
+            
+        }
+    </script>
+
+    
+    
+  
+    
+</body>
+
+</html>
